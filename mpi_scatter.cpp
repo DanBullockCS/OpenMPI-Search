@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define SIZE 4
+#define SIZE 4 // the number of processors passed with flag -np
 
 using namespace std;
 
@@ -45,7 +45,7 @@ int search(vector<string> substring_vec, string file) {
         }
         cout << endl;
         if (!found){
-            cout << search_str << " does not occur in file " << endl;
+            cout << search_str << " does not occur in rank " <<  rank << " part of the file" << endl;
         }
     }
     MPI_Barrier(MPI_COMM_WORLD);
